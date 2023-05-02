@@ -32,8 +32,9 @@ function App() {
       }
     }
   }
-
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+  const numbers = [0,1,2,3,4,5,6]
+  // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+  const labels = numbers.map(() => faker.address.city())
   const data = {
     labels,
     datasets: [
@@ -49,7 +50,8 @@ function App() {
       }
     ]
   }
-
+const demo = labels.map(() => faker.datatype.number({ min: 0, max: 1000}))
+console.log(demo);
   return (
     <>
       <div style={{width: "45vw"}}>
